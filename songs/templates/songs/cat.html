@@ -1,0 +1,15 @@
+{% extends 'songs/basic.html' %}
+
+{% comment %} {% block title%}M Play{% endblock%} {% endcomment %}
+{% block body%}
+{% load static%}
+<div class="container" style="background-image:url(/media/{{music.image}})" height="181px" width="181px">
+    <div class="songList">
+        <h1>Best of Today</h1>
+{% for i in cat%}
+{{i}}
+
+{% endfor%}
+    </div>
+</div>
+{% endblock%}

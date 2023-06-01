@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500;600&display=swap');
+
+
+
+
+
+
+body {
+    background-image: linear-gradient(to right, hsl(0deg 5.16% 11.07%), rgb(255 255 255));
+}
+
+* {
+    padding: 0 px;
+    margin: 0px;
+}
+
+nav {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+
+}
+
+nav ul li {
+    padding: 0px 15px;
+
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    height: 75px;
+    font-weight: bolder;
+
+}
+
+.logo {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    padding: 0px 10px;
+    height: 60px;
+    display: flex;
+}
+.card img
+{
+    border: 1px;
+    display: flex;
+    height: 150px;
+}
+
+.songBanner {
+
+    text-align: center;
+    min-height: 10px;
+    width: 70%;
+    background-color: black;
+    color: rgb(207, 153, 153);
+    display: flex;
+    border-radius: 10px;
+    padding: 0px 34px;
+    margin: 23px auto;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+.card
+{
+    
+    justify-content: center;
+    align-items: center;
+    border-color: aqua;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: aliceblue;
+    /* width:25%; */
+    background-color: rgb(0, 0, 0);
+    position:relative;
+
+}
+.container{
+    min-height: 70vh;
+    width: 70%;
+    background-color: rgb(3, 7, 27);;
+    color: white;
+    display: flex;
+    border-radius: 10px;
+    padding: 0px 34px;
+    margin: 23px auto;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    background-image: url(../songs/blue-headphones-music-vector-illustration-eps-42209272.jpg);
+
+
+    background-repeat: no-repeat;
+    background-position-x: 658px;
+    background-size: 400px 350px;
+    background-position-y: 100px;
+
+}
+
+.imagepos {
+    margin-right: 185px;
+    right: 555px;
+    height: 181px;
+    width: 190px;
+    background-color: rgb(234, 228, 228);
+    position: absolute;
+    top: 203px;
+}
+
+  
+.player {
+    padding: 0px 34px;
+    margin: 23px auto;
+    /* position: sticky; */
+    color: white;
+    bottom: 0px;
+    width: 70%;
+    height: 80px;
+    display: flex;
+    background-color:  rgb(0, 23, 30);
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+.audio
+{
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 50px;
+}
+.boldd {
+    font-weight: bold;
+}
+
+#myProgressBar {
+    width: 85vh;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icons {
+    margin-top: 0px;
+
+
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.songItem {
+    justify-content: space-between;
+    border-radius: 30px;
+    color: black;
+    margin-top: 20px;
+    width: 50vh;
+    display: flex;
+    background-color: rgb(192, 201, 241);
+    align-items: center;
+
+}
+
+.songItem img {
+    height: 40px;
+    border-radius: 30px;
+
+}
+
+.timespan i {
+    cursor: pointer;
+}
+
+.songItemContainer {
+    /* font-weight: bolder; */
+    padding: 30px 10px;
+}
+
+.songList h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.songInfo {
+    position: absolute;
+    /* margin-top: 0px; */
+    align-items: center;
+    left: 0;
+    margin-top: 23px;
+    /* //bottom: 0%; */
+    padding: 20px;
+    display: flex;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity .3s ease-in;
+    position: relative;
+    height: 40px;
+
+}
+.form-text
+{
+  background:red
+}
+.container1 {
+    padding-top: 20px;
+    width: 300px;
+    /* height: auto; */
+   
+    border-color: rgb(232, 136, 136);
+     margin: 50px 50px;
+     border: 10px;
+    position: relative;
+    /* text-align: center; */
+    /* background-color: aqua; */
+  }
