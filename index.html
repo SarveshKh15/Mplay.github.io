@@ -1,0 +1,66 @@
+{% extends 'songs/basic.html'%}
+
+{% block title%}M Play{% endblock%}
+{% block body %}
+{% load static %}
+{% csrf_token %}
+<div class="container">
+    <div class="songList">
+        <h1>Best of Today</h1>
+        <div class="songItemContainer">
+            {% for i in music %}
+
+            <div class="songItem">
+                <img src="/media/{{i.image}}" alt="1">
+                <span class="songName">
+                    <h3>{{i}}</h3>
+                </span>
+
+                <span class="songPlayList">
+                    <span class="timespan">{{i.music_durations}}
+                        &nbsp; &nbsp;
+                        <a href="/songs/{{i.id}}"><i id="{{i.id}}"
+                                class="fa-solid songItemPlay fa-play"></i></a>&nbsp;&nbsp;
+                    </span>
+                </span>
+            </div>
+
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+<div class="songBanner">
+    {% for i in categories%}
+    
+
+    <div class="card" style="width: 25%; height:auto">
+        <img src="/media/{{i.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          
+          {% comment %} <p class="card-text">{{i}}</p> {% endcomment %}
+          <a href="/songs/?category={{i.id}}" class="btn btn-outline-info btn-lg" ><h5 class="card-title">{{i}} songs</h5></a>
+        </div>
+      </div>
+    
+            {% endfor%}
+
+</div>
+
+        {% comment %} <input type="range" name="rage" id="myProgressBar" min="0" value="0" max="100">
+        <br>
+        <div class="icons">
+            <i class="fa-solid fa-2x fa-backward-step" id="Prev"></i>
+            &nbsp;&nbsp; &nbsp;
+            <i class="fa-solid fa-2x fa-play" id="masterPlay"></i>&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-2x fa-forward-step" id="Next"></i>
+
+        </div>
+        <div class="songInfo">
+            <img src="{% static 'playing.gif' %}" id="gif" alt=""><span id="masterSongName">Beriya ~Arjit Singh</span>
+        </div> {% endcomment %}
+    
+
+    {% endblock%}
