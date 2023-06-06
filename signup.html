@@ -1,0 +1,51 @@
+{% extends 'songs/basic.html' %}
+
+{% load static%}
+
+
+{% block title%}Login{% endblock%}
+
+
+{% block body%}
+{% csrf_token %}
+<div class="container" >
+  
+  <div class="container1">
+    <h2>Sign IN</h2>
+    <br>
+    <br> 
+    <form  method="POST" action="/songs/signup">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="@name" class="form-label" > Name</label>
+        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="name">
+      </div>
+        <div class="mb-3">
+          <label for="@username" class="form-label" >User Name</label>
+          <input type="text" class="form-control" id="username" aria-describedby="emailHelp" name="username">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="Password1" name="pass1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="Password2" name="pass2">
+        </div>
+        <div class="mb-3">
+          <label for="Emai1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <button type="submit" class="btn btn-outline-info ">Submit</button><br><br>
+        <h7>Already have an account</h7>
+        <a href="/songs/login"  class="btn btn-outline-info ">Login</a>
+      </form>
+    </div>
+   
+  </form>
+    </div>
+
+</div>
+
+{% endblock%}

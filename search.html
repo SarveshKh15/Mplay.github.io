@@ -1,0 +1,38 @@
+{% extends 'songs/basic.html'%}
+
+{% block title%}Search results{% endblock%}
+{% block body %}
+{% load static %}
+<div class="container">
+    <div class="songList">
+        <h1>Search Results for {{search}}</h1>
+
+        <div class="songItemContainer">
+            {% if song|length < 1  %}
+            <h2>No songs found</h2>
+            {% endif%}
+
+            {% for i in song %}
+
+
+            <div class="songItem">
+                <img src="/media/{{i.image}}" alt="1">
+                <span class="songName">
+                    <h3>{{i}}</h3>
+                </span>
+
+                <span class="songPlayList">
+                    <span class="timespan">{{i.music_durations}}
+                        &nbsp; &nbsp;
+                        <a href="/songs/{{i.id}}"><i id="{{i.id}}"
+                                class="fa-solid songItemPlay fa-play"></i></a>&nbsp;&nbsp;
+                    </span>
+                </span>
+            </div>
+
+
+            {% endfor %}
+
+    </div>
+</div>
+{% endblock%}

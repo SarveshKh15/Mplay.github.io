@@ -1,0 +1,52 @@
+{% extends 'songs/basic.html' %}
+
+{% comment %} {% block title%}M Play{% endblock%} {% endcomment %}
+{% block body%}
+{% csrf_token %}
+{% if mesaage%}
+    <script>
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Song added in Watchlater',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    </script>
+{% endif %}
+{% load static%}
+<div class="container" style="background-image:url(/media/{{music.image}})" height="181px" width="181px">
+    <div class="songList">
+        <h1>Best of Today</h1>
+        <div class="songItemContainer">
+           <h2> Song Name: {{music}}</h2><br>
+           <h2> Atrist:  {{music.music_singer}}</h2><br>
+           <h2> Movie:  {{music.music_movie}}</h2><br>
+           <h2> Duration: {{music.music_durations}}</h2><br>
+   
+           <h2> Release Date: {{music.pub_date}}</h2><br>
+          
+           <br> <form action="/songs/watchlater" method="POST">{% csrf_token %}
+            <input type="hidden" name="video_id" value="{{music.id}}">
+
+            <button  type="submit" class="btn btn-outline-info  "> Add to watchlater </button>
+            </form>
+        </div>
+        {% comment %} <div class="imagepos">
+            <img src="/media/{{music.image}}" height="181px"
+            width="190px">
+        </div> {% endcomment %}
+    </div>
+</div>
+
+
+<div class="player" >
+    <audio controls class="audio">
+    <source src="/media/{{music.audio}}" type="audio/mp3">
+    </audio> 
+ 
+   
+</div>
+
+
+    {% endblock%}

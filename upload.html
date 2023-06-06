@@ -1,0 +1,51 @@
+{% extends 'songs/basic.html'%}
+
+{% block title%}Upload Music{% endblock%}
+{% block body %}
+{% load static %}
+<div class="container">
+    <div class="songList">
+        <h1>Uplaod Your Music</h1>
+        <br>
+        <form  method="POST" enctype="multipart/form-data"  action="/songs/upload">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="@name" class="form-label" > Music Name</label>
+              <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="name">
+            </div>
+              <div class="mb-3">
+                <label for="@Singername" class="form-label" >Singer Name</label>
+                <input type="text" class="form-control" id="Singername" aria-describedby="emailHelp" name="Singername">
+              </div>
+              <div class="mb-3">
+                <label for="@Moviername" class="form-label" >Movie Name</label>
+                <input type="text" class="form-control" id="Moviername" aria-describedby="emailHelp" name="Moviename">
+              </div>
+              <div class="mb-3">
+                <label for="@Song Duration" class="form-label" >Music Duration</label>
+                <input type="text" class="form-control" id="Song Duration" aria-describedby="emailHelp" name="duration">
+              </div>
+              <div class="mb-3">
+                <label for="@category" class="form-label" >Category</label>
+                <input type="text" class="form-control" id="category" aria-describedby="emailHelp" name="category">
+              </div>
+              <div class="mb-3">
+                <label for="@addMusic" class="form-label" >Add Music File</label>
+                <input type="file" class="form-control" id="addMusic" aria-describedby="emailHelp" name="audio">
+              </div>
+              <div class="mb-3">
+                <label for="@addCover" class="form-label" >Add Music Cover</label>
+                <input type="file" class="form-control" id="addCover" aria-describedby="emailHelp" name="image">
+              </div>
+              <div class="mb-3">
+                <label for="@pub_date" class="form-label" >pub_date</label>
+                <input type="date" class="form-control" id="pub_date" aria-describedby="emailHelp" name="pub_date">
+              </div>
+
+              
+              <button type="submit" class="btn btn-outline-info ">Submit</button><br><br>
+            </form>
+          </div>
+    </div>
+</div>
+{% endblock%}
